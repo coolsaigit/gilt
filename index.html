@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="tab.css">
+    <!--<script src="https://www.w3schools.com/lib/w3.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>-->
+</head>
+
+<body>
+
+    <div class="sidebar light-grey card-4 animate-left" style="width: 180px; display: none;" id="mySidebar">
+        <div class="bar dark-grey">
+            <span class="bar-item padding-16">Content</span>
+        </div>
+        <div class="bar-block">
+            <a class="bar-item button gilded" href="javascript:void(0)">Home</a>
+            <a class="bar-item button" href="javascript:void(0)">About</a>
+            <a class="bar-item button" href="javascript:void(0)">Contact</a>
+            <a class="bar-item button" href="javascript:void(0)">Support</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="bg-1">
+            <div class="account">
+                <a id="signIn" class="button" href="#">Sign In</a>
+                <a id="register" class="button" href="#">Register</a>
+                <a id="cart" class="btn" href="#">Cart<span id="cart-count">1</span></a>
+                <a id="checkout" class="btn gild-btn" href="#">Checkout</a>
+            </div>
+            <a href="javascript:void(0)" class="btn left twhite" onclick="side_toggle()"><i class="material-icons">menu</i></a>
+            <div class="menu clear">
+                <ul class="nav left medium hide-medium hide-small" style="margin-left: 150px;">
+                    <li class="relative">
+                        <a href="#">Featured</a>
+                        <div class="submenu border white"></div>
+                    </li>
+                    <li class="relative selected"><a href="#">Women</a>
+                        <div class="submenu border white">
+                        </div>
+                    </li>
+                    <li class="relative"><a href="#">Men</a>
+                        <div class="submenu border white">
+                            <div class="store-menu menu-has-4-columns">
+                                <div class="menu-sub-section todays-sales">
+                                    <h2 class="menu-sub-title" data-gilt-test="text-today-sale" data-gilt-tracking="Today's Sales">
+                                        Today's Sales
+                                        <a class="sub-section-footer call-to-action" href="/sale/men" data-gilt-test="link-view-all-sales" data-gilt-tracking="Today's Sales">
+                            View all Sales
+                          </a>
+                                    </h2>
+                                    <ul class="menu-actions" data-gilt-tracking="Today's Sales">
+                                        <li class="menu-action">
+                                            <a href="/sale/men/86789009" class="action-link">
+                                Jared Lang Collection
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/jared-lang-footwear" class="action-link">
+                                Jared Lang: Footwear &amp; Accessories
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/new-arrivals-for-him-8044" class="action-link">
+                                New Arrivals: For Him
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/k-swiss-sneakers" class="action-link">
+                                Cool Kicks Feat. K-Swiss
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/montblanc-accessories-9839" class="action-link">
+                                Montblanc Accessories
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/dress-shirts-starting-at-29-6288" class="action-link">
+                                Dress Shirts Starting At $29
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/grooming-1973" class="action-link">
+                                Grooming Made Easy
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/mm/wedding-guest-8362" class="action-link">
+                                Best Dressed Wedding Guest
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/mm/outdoor-shop-8284" class="action-link">
+                                Active Shop Feat. Skins
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/sale/men/all-black-everything-4965" class="action-link">
+                                All Black Everything
+                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-sub-section nav-categories ">
+                                    <h2 class="menu-sub-title" data-gilt-tracking="Categories">
+                                        Categories
+                                    </h2>
+                                    <ul class="menu-actions" data-gilt-tracking="Categories">
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-outerwear" class="action-link" rel="nofollow">
+                              Outerwear
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-sweaters-knits" class="action-link" rel="nofollow">
+                              Sweaters &amp; Knits
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-sportshirts" class="action-link" rel="nofollow">
+                              Sportshirts
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-denim-pants" class="action-link" rel="nofollow">
+                              Denim &amp; Pants
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-active" class="action-link" rel="nofollow">
+                              Active
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-dress-shirts-ties" class="action-link" rel="nofollow">
+                              Dress Shirts &amp; Ties
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-suits-sportcoats" class="action-link" rel="nofollow">
+                              Suits &amp; Sportcoats
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-shoes" class="action-link" rel="nofollow">
+                              Shoes
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-socks-underwear-loungewear" class="action-link" rel="nofollow">
+                              Socks, Underwear &amp; Loungewear
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-hats-gloves-scarves" class="action-link" rel="nofollow">
+                              Hats, Gloves &amp; Scarves
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-bags-belts-wallets" class="action-link" rel="nofollow">
+                              Bags, Belts &amp; Wallets
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-sunglasses-eyewear" class="action-link" rel="nofollow">
+                              Sunglasses &amp; Eyewear
+                            </a>
+                                        </li>
+                                        <li class="menu-action">
+                                            <a href="/category/men/mens-accessories-watches" class="action-link" rel="nofollow">
+                              Accessories &amp; Watches
+                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-sub-section nav-dujour-magazine ">
+                                    <h2 class="menu-sub-title" data-gilt-tracking="DuJour Magazine">
+                                        DuJour Magazine
+                                    </h2>
+                                    <ul class="menu-actions" data-gilt-tracking="DuJour Magazine">
+                                        <li class="menu-action">
+                                            <a href="http://www.dujour.com" class="action-link" rel="nofollow" target="_blank">
+                              Exclusive access to fashion, design, culture, travel, and parties
+                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-sub-section nav-promo ">
+                                    <ul class="menu-actions" data-gilt-tracking="Promo">
+                                        <li class="menu-action">
+                                            <a href="/sale/women/mm/gilt-by-appointment-1" class="action-link" rel="nofollow">
+                                                <img src="/Users/santhoshvelliangiri/Code/win/assets/gilt/GBA_Nav_Dropdown_Asset.jpg">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="relative"><a href="#">Kids</a>
+                        <div class="submenu border white">
+                        </div>
+                    </li>
+                    <li class=""><a href="#">Home</a></li>
+                    <li class=""><a href="#">City</a></li>
+                    <li class=""><a href="#">Travel</a></li>
+                </ul>
+
+                <div id="searchbar" class="right hide-small" style="width: 260px; margin-right: 35px">
+                    <form class="search flex search-form">
+                        <!--<div class="flex right twhite" style="width: 100%;margin: 0px;height: 40px">
+                            <a href="#" class="button white flex-input-btn hover-none"><i class="material-icons">search</i></a>
+                        </div>-->
+                        <input class="input flex-input-field" type="text" placeholder="Search">
+                        <div class="search-menu">
+                            <div class="search-title">Shop Women's Categories</div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Users</a></li>
+                                <li class="has-sub-categories"><a href="#">Admins</a>
+                                    <ul>
+                                        <li><a href="#">Web</a></li>
+                                        <li><a href="#">Database</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub-categories"><a href="#">Summa</a>
+                                    <ul>
+                                        <li><a href="#">Web1</a></li>
+                                        <li><a href="#">Database1</a></li>
+                                        <li><a href="#">Contact1</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Summa 2</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <aside class="clear">
+                <h1>We've Gotten Better: More to search, easy returns & free shipping over $99 w/code SHIP99.
+                    <span class="gilded"><a href="#">Learn More.</a></span>
+                </h1>
+            </aside>
+        </header>
+        <div class="hero">
+            <div class="container">
+                <h1>Hello, world!</h1>
+                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <div class="btn blue padding-large ripple">
+                    BUTTON
+                </div>
+            </div>
+        </div>
+        <section class="starting-later-today upcoming-sales">
+            <header class="section-header">
+                <h1 class="section-title">
+                    Starting Later Today in Women
+                </h1>
+            </header>
+            <div class="container">
+                <div class="grid">
+                    <div class="grid2 relative">
+                        <a href="#" class="">
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1033/510337845/312x334.jpg?oq=85" srcset="" alt="" class="sale-image">
+                            <h5 class="sale-name1">Alphakilo Sneakers</h5>
+                        </a>
+                    </div>
+                    <div class="grid2 relative">
+                        <a href="#" class="">
+                            <h5 class="sale-name1">Extra 25% Off: Leather Jacket Event</h5>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1051/510517573/312x334.jpg?oq=85" srcset="" alt="">
+                        </a>
+                    </div>
+                    <div class="grid2 relative">
+                        <a href="#" class="">
+                            <h5 class="sale-name1">Alphakilo Sneakers</h5>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1033/510337845/312x334.jpg?oq=85" srcset="" alt="" class="sale-image">
+                        </a>
+                    </div>
+                    <div class="grid2 relative">
+                        <a href="#" class="">
+                            <h5 class="sale-name1">Extra 25% Off: Leather Jacket Event</h5>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1051/510517573/312x334.jpg?oq=85" srcset="" alt="">
+                        </a>
+                    </div>
+                    <div class="grid2 relative">
+                        <a href="#" class="">
+                            <h5 class="sale-name1">Alphakilo Sneakers</h5>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1033/510337845/312x334.jpg?oq=85" srcset="" alt="" class="sale-image">
+                        </a>
+                    </div>
+                    <div class="grid2 relative">
+                        <a href="#" class="">
+                            <h5 class="sale-name1">Extra 25% Off: Leather Jacket Event</h5>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1051/510517573/312x334.jpg?oq=85" srcset="" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="starting-later-today upcoming-sales">
+            <header class="section-header">
+                <h1 class="section-title">
+                    Starting Later Today in Women
+                </h1>
+            </header>
+            <div class="container">
+                <div class="grid">
+                    <div class="grid3 tint relative">
+                        <a href="#" class="">
+                            <p class="sale-start-time">6:00 PM</p>
+                            <p class="sale-name2">Salvatore Ferragamo Watches</p>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1053/510532732/496x532.jpg?oq=60" srcset="" alt="" class="sale-image">
+                        </a>
+                    </div>
+                    <div class="grid3 tint relative">
+                        <a href="#" class="">
+                            <p class="sale-start-time">6:00 PM</p>
+                            <p class="sale-name2">Extra 25% Off: Leather Jacket Event</p>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1051/510517573/312x334.jpg?oq=85" srcset="" alt="">
+                        </a>
+                    </div>
+                    <div class="grid3 tint relative">
+                        <a href="#" class="">
+                            <p class="sale-start-time">6:00 PM</p>
+                            <p class="sale-name2">Salvatore Ferragamo Watches</p>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1053/510532732/496x532.jpg?oq=60" srcset="" alt="" class="sale-image">
+                        </a>
+                    </div>
+                    <div class="grid3 tint relative">
+                        <a href="#" class="">
+                            <p class="sale-start-time">6:00 PM</p>
+                            <p class="sale-name2">Extra 25% Off: Leather Jacket Event</p>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1051/510517573/312x334.jpg?oq=85" srcset="" alt="">
+                        </a>
+                    </div>
+                    <div class="grid3 tint relative">
+                        <a href="#" class="">
+                            <p class="sale-start-time">6:00 PM</p>
+                            <p class="sale-name2">Salvatore Ferragamo Watches</p>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1053/510532732/496x532.jpg?oq=60" srcset="" alt="" class="sale-image">
+                        </a>
+                    </div>
+                    <div class="grid3 tint relative">
+                        <a href="#" class="">
+                            <p class="sale-start-time">6:00 PM</p>
+                            <p class="sale-name2">Extra 25% Off: Leather Jacket Event</p>
+                            <img class="image" src="https://cdn5.giltcdn.com/images/share/uploads/0000/0005/1051/510517573/312x334.jpg?oq=85" srcset="" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="starting-later-today upcoming-sales">
+            <div class="container">
+                <header class="section-header">
+                    <h1 class="section-title">
+                        Starting Later Today in Women
+                    </h1>
+                </header>
+                <ul class="nav">
+                    <li class="item selected"><a href="javascript:void(0)" onclick="openCity('London')">London</a></li>
+                    <li class="item"><a href="javascript:void(0)" onclick="openCity('Paris')">Paris</a></li>
+                    <li class="item"><a href="javascript:void(0)" onclick="openCity('Tokyo')">Tokyo</a></li>
+                </ul>
+                <hr>
+                <div id="London" class="container city">
+                    <h2>London</h2>
+                    <p>London is the capital city of England.</p>
+                </div>
+
+                <div id="Paris" class="container city" style="display:none">
+                    <h2>Paris</h2>
+                    <p>Paris is the capital of France.</p>
+                </div>
+
+                <div id="Tokyo" class="container city" style="display:none">
+                    <h2>Tokyo</h2>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="starting-later-today upcoming-sales">
+            <div class="container">
+                <header class="section-header">
+                    <h1 class="section-title">
+                        Starting Later Today in Women
+                    </h1>
+                </header>
+                <div onclick="snackbar('My message', 3000)" class="btn blue ripple">
+                    Snackbar!
+                </div>
+                <div id="snackbar">Hi</div>
+                <div class="demo" style="width: 35%">
+                    <div class="media">
+                        <img class="media-figure" style="width: 70px" src="https://philipwalton.github.io/solved-by-flexbox/images/kitten.jpg" alt="Kitten">
+                        <div class="media-body">
+                            <h3 class="media-title">Standard Media Object</h3>
+                            <p>Donec imperdiet sem leo, id rutrum risus aliquam vitae. Cras tincidunt porta mauris, vel feugiat mauris accumsan eget.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="demo" style="width: 35%">
+                    <div class="media">
+                        <!--<figure class="media-figure"><i class="material-icons">comment</i></figure>-->
+                        <figure class="media-figure"><span class="icon-comments icon-big"></span></figure>
+                        <div class="media-body">
+                            <h3 class="media-title">Using Icons</h3>
+                            <p>Donec imperdiet sem leo, id rutrum risus aliquam vitae. Vestibulum ac turpis non lacus dignissim dignissim eu sed dui.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="starting-later-today upcoming-sales">
+            <header class="section-header">
+                <h1 class="section-title">
+                    Starting Later Today in Women
+                </h1>
+            </header>
+            <div class="container">
+                <div class="grid">
+                    <div class="grid1">
+                        <a class="thumbnail-wrapper card-2 hover-shadow" data-ix="blog-thumbnail" href="/blog/still-standing-tall">
+                            <div class="image-wrapper">
+                                <div class="thumbnail-image" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe156f_photo-1433854304641-67729357fe18.jpg');"></div>
+                                <div class="category-tag" style="background-color: #e6c728;">Nature</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <div class="blog-title">Still Standing Tall</div>
+                                <div class="preview-text">Life begins at the end of your comfort zone.</div>
+                            </div>
+                            <div class="thumb-details"><img class="author-img" src="https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe155e_128-34.jpg">
+                                <div class="author-title">William Wong</div>
+                                <div class="thumbnail-date">9/24/2015</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid1">
+                        <a class="thumbnail-wrapper card-2 hover-shadow" data-ix="blog-thumbnail" href="/blog/still-standing-tall">
+                            <div class="image-wrapper">
+                                <div class="thumbnail-image" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe156f_photo-1433854304641-67729357fe18.jpg');"></div>
+                                <div class="category-tag" style="background-color: #e6c728;">Nature</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <div class="blog-title">Still Standing Tall</div>
+                                <div class="preview-text">Life begins at the end of your comfort zone.</div>
+                            </div>
+                            <div class="thumb-details"><img class="author-img" src="https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe155e_128-34.jpg">
+                                <div class="author-title">William Wong</div>
+                                <div class="thumbnail-date">9/24/2015</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid1">
+                        <a class="thumbnail-wrapper card-2 hover-shadow" data-ix="blog-thumbnail" href="/blog/sunny-side-up">
+                            <div class="image-wrapper">
+                                <div class="thumbnail-image" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe156a_photo-1431329842981-433c8635c2b9.jpg');"></div>
+                                <div class="category-tag" style="background-color: #a872b7;">Photography</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <div class="blog-title">Sunny Side Up</div>
+                                <div class="preview-text">No place is ever as bad as they tell you it’s going to be.</div>
+                            </div>
+                            <div class="thumb-details w-clearfix"><img class="author-img" src="https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe1567_128-14.jpg">
+                                <div class="author-title">Mat Vogels</div>
+                                <div class="thumbnail-date">9/24/2015</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid1">
+                        <a class="thumbnail-wrapper card-2 hover-shadow" data-ix="blog-thumbnail" href="/blog/sunny-side-up">
+                            <div class="image-wrapper">
+                                <div class="thumbnail-image" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe156a_photo-1431329842981-433c8635c2b9.jpg');"></div>
+                                <div class="category-tag" style="background-color: #a872b7;">Photography</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <div class="blog-title">Sunny Side Up</div>
+                                <div class="preview-text">No place is ever as bad as they tell you it’s going to be.</div>
+                            </div>
+                            <div class="thumb-details w-clearfix"><img class="author-img" src="https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe1567_128-14.jpg">
+                                <div class="author-title">Mat Vogels</div>
+                                <div class="thumbnail-date">9/24/2015</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid1">
+                        <a class="thumbnail-wrapper card-2 hover-shadow" data-ix="blog-thumbnail" href="/blog/still-standing-tall">
+                            <div class="image-wrapper">
+                                <div class="thumbnail-image" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe156f_photo-1433854304641-67729357fe18.jpg');"></div>
+                                <div class="category-tag" style="background-color: #e6c728;">Nature</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <div class="blog-title">Still Standing Tall</div>
+                                <div class="preview-text">Life begins at the end of your comfort zone.</div>
+                            </div>
+                            <div class="thumb-details w-clearfix"><img class="author-img" src="https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe155e_128-34.jpg">
+                                <div class="author-title">William Wong</div>
+                                <div class="thumbnail-date">9/24/2015</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid1">
+                        <a class="thumbnail-wrapper card-2 hover-shadow" data-ix="blog-thumbnail" href="/blog/sunny-side-up">
+                            <div class="image-wrapper">
+                                <div class="thumbnail-image" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe156a_photo-1431329842981-433c8635c2b9.jpg');"></div>
+                                <div class="category-tag" style="background-color: #a872b7;">Photography</div>
+                            </div>
+                            <div class="thumbnail-text">
+                                <div class="blog-title">Sunny Side Up</div>
+                                <div class="preview-text">No place is ever as bad as they tell you it’s going to be.</div>
+                            </div>
+                            <div class="thumb-details w-clearfix"><img class="author-img" src="https://daks2k3a4ib2z.cloudfront.net/589f28b93452732276fe14c0/589f28b93452732276fe1567_128-14.jpg">
+                                <div class="author-title">Mat Vogels</div>
+                                <div class="thumbnail-date">9/24/2015</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="black bottom opacity-min flex-align" style="height: 90px;">
+                <h4 class="button">Designer finds, travel, and experiences — <span class="gilded"> up to 70% off </span></h4>
+                <a id="join-gilt" class="btn gild-btn" href="#">Join Gilt</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function snackbar(msg, ms) {
+            var ts = document.getElementById("snackbar");
+            ts.innerText = msg;
+            ts.className = "show";
+            setTimeout(function() {
+                ts.className = ts.className.replace("show", "");
+            }, ms);
+        }
+
+        function side_toggle() {
+            if (document.getElementById("mySidebar").style.display == "block") {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("main").style.marginLeft = "0%";
+            } else {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("main").style.marginLeft = "15%";
+                document.getElementById("mySidebar").style.width = "15%";
+            }
+        }
+
+        function openCity(cityName) {
+            var i;
+            console.log(cityName);
+            console.log(this);
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(cityName).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
